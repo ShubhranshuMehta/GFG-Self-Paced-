@@ -4,7 +4,7 @@ import java.util.*;
 // EUCLID ALGORITHM
 public class GCD{
     public static void main(String[] args){
-
+        
     }
 
     public static int GCD(int a, int b){
@@ -20,7 +20,22 @@ public class GCD{
     }
 
     public static int GCDusingEuclidAlgorithm(int a, int b){
-        
+        // gcd(a,b) = gcd(a-b,b) if b<a
+        while(a!=b){
+            if(a>b){
+                a=a-b;
+            }else{
+                b=b-a;
+            }
+        }
+        return a;
+    }
+
+    public static void GCDusingEuclidAlgorithm2(int a, int b){
+        if(b==0){
+            return a;
+        }
+        return GCDusingEuclidAlgorithm2(b, a%b);
     }
 
 }

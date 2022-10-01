@@ -5,7 +5,7 @@ public class MaximumSumSubarray{
 
 	}
 
-	public static int sumSub(int[] arr, int n){ //Kadabe's Algoritm
+	public static int sumSub(int[] arr, int n){ //Kadane's Algoritm
 		int res = arr[0];
 		int maxEnding = arr[0];
 
